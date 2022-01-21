@@ -287,7 +287,7 @@ class PrimaryTopicController extends BaseController
         }
         catch(Exception $e) 
         {
-            logger('primary topic by favorite error: '.$e->getMessage());
+            logger('topic by favorite error: '.$e->getMessage());
             return $this->handleError('Something went wrong', [], 500);
         }
     }
