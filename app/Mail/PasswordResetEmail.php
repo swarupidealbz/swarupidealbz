@@ -34,9 +34,16 @@ class PasswordResetEmail extends Mailable
     {
         return $this
             ->subject('Password changed')
-            ->text('emails.auth.password_changed_plain')
-            ->view('vendors.notifications.email', [
-                'user' => $this->user,
+            ->markdown('vendor.notifications.reset-password-email', [
+                'greeting' => sprintf('Hello %s!', $this->user->name),
+				'introLines' => [
+					Lang::get('You are receiving this email because we received a password reset request for your account.'),
+					Lang::get('Your password has been reset to:'),
+				],
+				'password' => $this->user->original,
+				'outroLines' => [
+					Lang::get('If you did not request a password reset, Please update your password immediately.')
+				]
             ]);
     }
 }

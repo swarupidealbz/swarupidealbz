@@ -3,7 +3,6 @@
 namespace App\Listeners;
 
 use App\Mail\PasswordResetEmail;
-use App\Notifications\PasswordResetEmailNotification;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
@@ -33,5 +32,6 @@ class SendPasswordResetEmail
 
         Mail::to($user)
             ->send(new PasswordResetEmail($user));
+		
     }
 }

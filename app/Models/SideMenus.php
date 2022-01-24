@@ -11,4 +11,11 @@ class SideMenus extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'side_menu';
+	protected $guarded = [];
+    protected $with = ['sub_menus'];
+	
+	public function sub_menus()
+    {
+        return $this->hasMany(SideMenus::class, 'parent_id');
+    }
 }

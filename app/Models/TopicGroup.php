@@ -10,13 +10,13 @@ class TopicGroup extends Model
     use HasFactory;
 
     protected $table = 'topic_groups';
-
-    public function group()
+	
+	public function group()
     {
         return $this->belongsTo(Groups::class, 'group_id');
     }
-
-    public function topic()
+	
+	public function topic()
     {
         return $this->belongsTo(Topics::class, 'topic_id');
     }

@@ -19,7 +19,6 @@ class CreateNotificationsTable extends Migration
             $table->integer('sender_user_id');
             $table->string('heading');
             $table->longText('details');
-            $table->tinyInteger('is_read')->default(0)->after('details');
             $table->integer('created_by_id');
             $table->integer('updated_by_id');
             $table->timestamps();

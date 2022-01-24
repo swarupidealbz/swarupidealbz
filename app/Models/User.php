@@ -47,4 +47,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Websites::class, 'created_by_id');
     }
+	
+	public function favoriteTopic()
+    {
+        return $this->hasMany(TopicFavorite::class, 'user_id');
+    }
 }

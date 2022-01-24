@@ -31,8 +31,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        ResetPassword::toMailUsing(function ($notifiable, $url) {
-            $minute = 10;
+		ResetPassword::toMailUsing(function ($notifiable, $url) {            
+			$minute = 10;
 			$verifyUrl = URL::temporarySignedRoute(
                 'reset-password',
                 Carbon::now()->addMinutes(Config::get('auth.verification.expire', $minute)),
@@ -49,7 +49,7 @@ class AppServiceProvider extends ServiceProvider
 				->line(Lang::get('This password reset link will expire in :count minutes.', ['count' => $minute]))
 				->line(Lang::get('If you did not request a password reset, no further action is required.'));
 		});
-        VerifyEmail::toMailUsing(function ($notifiable, $url) {
+		VerifyEmail::toMailUsing(function ($notifiable, $url) {
             $verifyUrl = URL::temporarySignedRoute(
                 'verification.verify',
                 Carbon::now()->addMinutes(Config::get('auth.verification.expire', 60)),
@@ -67,5 +67,4 @@ class AppServiceProvider extends ServiceProvider
 		});
         Schema::defaultStringLength(191);
     }
-    
 }

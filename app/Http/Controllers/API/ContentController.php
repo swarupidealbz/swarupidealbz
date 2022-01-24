@@ -228,19 +228,20 @@ class ContentController extends BaseController
 
             $website = Websites::find($request->website);
             $owners = explode(',', $website->owners);
-            $time = Carbon::now()->toDateTimeString();
+			$time = Carbon::now()->toDateTimeString();
             $notify = [];
             if($loginUser->role == 'writer') {
                 foreach($owners as $owner) {
                     $notify[] = [
                         'recipient_user_id' => $owner,
                         'sender_user_id' => $loginUser->id,
+						'website_id' => $website->id,
                         'heading' => 'Record updated',
                         'details' => sprintf('%s for %s has been updated.', $contentDetails->title, $website->name),
-                        'created_by_id' => $loginUser->id,
-                        'updated_by_id' => $loginUser->id,
-                        'created_at' => $time,
-                        'updated_at' => $time
+						'created_by_id' => $loginUser->id,
+						'updated_by_id' => $loginUser->id,
+						'created_at' => $time,
+						'updated_at' => $time
                     ];
                 }
             }
@@ -248,12 +249,13 @@ class ContentController extends BaseController
                 $notify[] = [
                     'recipient_user_id' => $contentDetails->created_by_id,
                     'sender_user_id' => $loginUser->id,
+					'website_id' => $website->id,
                     'heading' => 'Status updated',
                     'details' => sprintf('%s has been %s by %s.', $contentDetails->title, $contentDetails->fresh()->status, $loginUser->name),
-                    'created_by_id' => $loginUser->id,
-                    'updated_by_id' => $loginUser->id,
-                    'created_at' => $time,
-                    'updated_at' => $time
+					'created_by_id' => $loginUser->id,
+					'updated_by_id' => $loginUser->id,
+					'created_at' => $time,
+					'updated_at' => $time
                 ];
             }
             if(count($notify)) {
@@ -316,12 +318,13 @@ class ContentController extends BaseController
                     $notify[] = [
                         'recipient_user_id' => $owner,
                         'sender_user_id' => $loginUser->id,
+						'website_id' => $website->id,
                         'heading' => 'New record Created',
                         'details' => sprintf('New %s has been added to %s.', $request->content_type, $website->name),
-                        'created_by_id' => $loginUser->id,
-                        'updated_by_id' => $loginUser->id,
-                        'created_at' => $time,
-                        'updated_at' => $time
+						'created_by_id' => $loginUser->id,
+						'updated_by_id' => $loginUser->id,
+						'created_at' => $time,
+						'updated_at' => $time
                     ];
                 }
                 Notifications::insert($notify);

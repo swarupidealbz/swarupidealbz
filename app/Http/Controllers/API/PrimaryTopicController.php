@@ -129,19 +129,19 @@ class PrimaryTopicController extends BaseController
 
             $loginUser = Auth::user();
             $website = is_array($request->website) ? $request->website : explode(',',$request->website);
-            // if($loginUser->role == 'client') {
+            //if($loginUser->role == 'client') {
                 $topicList = Topics::where('is_primary_topic', 1)->whereIn('website_id', $website)->with(['groups.group'])->get()
 				->map(function($topic) use($loginUser){
 					if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
 						$topic->is_favorite = true;
 					}
-                    else {
+					else {
                         $topic->is_favorite = false; 
                     }
 					return $topic;
 				});
-
-                $selectedGroups = [
+				
+				$selectedGroups = [
                     Topics::STATUS_APPROVED => [
                         'id' => Topics::STATUS_APPROVED,
                         'name' => ucwords(Topics::STATUS_APPROVED),
@@ -160,15 +160,15 @@ class PrimaryTopicController extends BaseController
                     'topics' => $topicList,
                     'groups' => $selectedGroups
                 ];
-            // }
-            // else {
-            //     $topicList = Topics::where('is_primary_topic', 1)->get()->map(function($topic) use($loginUser){
-			// 		if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
-			// 			$topic->is_favorite = true;
-			// 		}
-			// 		return $topic;
-			// 	});
-            // }
+            /*}
+            else {
+                $topicList = Topics::where('is_primary_topic', 1)->get()->map(function($topic) use($loginUser){
+					if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
+						$topic->is_favorite = true;
+					}
+					return $topic;
+				});
+            }*/
 
             return $this->handleResponse($response, 'Fetched matched website lists.');
         }
@@ -197,7 +197,7 @@ class PrimaryTopicController extends BaseController
 					if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
 						$topic->is_favorite = true;
 					}
-                    else {
+					else {
                         $topic->is_favorite = false; 
                     }
 					return $topic;

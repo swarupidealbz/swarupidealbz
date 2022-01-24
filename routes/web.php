@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get('/record/menu', [SampleRecordController::class, 'createMenu']);
 Route::get('/record/website', [SampleRecordController::class, 'createWebsite']);
+Route::get('/sample', [SampleRecordController::class, 'sample']);

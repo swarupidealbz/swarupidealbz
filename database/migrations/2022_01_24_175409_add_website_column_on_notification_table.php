@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTopicFavriteTable extends Migration
+class AddWebsiteColumnOnNotificationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateTopicFavriteTable extends Migration
      */
     public function up()
     {
-        Schema::create('topic_favorite', function (Blueprint $table) {
-            $table->id();
-            $table->integer('topic_id');
-            $table->integer('user_id');
+        Schema::table('notifications', function (Blueprint $table) {
+            $table->integer('website_id')->after('sender_user_id');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateTopicFavriteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('topic_favorite');
+        Schema::table('notifications', function (Blueprint $table) {
+            $table->dropColumn('website_id');
+        });
     }
 }

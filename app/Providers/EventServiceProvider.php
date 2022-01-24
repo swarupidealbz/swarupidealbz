@@ -20,7 +20,7 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        PasswordReset::class => [
+		PasswordReset::class => [
             SendPasswordResetEmail::class,
         ],
     ];

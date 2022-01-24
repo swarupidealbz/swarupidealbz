@@ -13,6 +13,7 @@ use App\Http\Controllers\API\PrimaryTopicController;
 use App\Http\Controllers\API\RegionController;
 use App\Http\Controllers\API\WebsiteController;
 use App\Http\Controllers\SampleRecordController;
+use App\Http\Controllers\API\SetFavoriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,7 +100,7 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
         Route::post('/list-for-timeline', [ContentController::class, 'contentForTimeline'])->name('list-for-timeline');
         Route::post('/show-by-role/{content}', [ContentController::class, 'contentShowByRole'])->name('show-by-role');
         Route::post('/review-content', [ContentController::class, 'reviewContent'])->name('review-content');
-        Route::post('/create', [ContentController::class, 'create'])->name('create');
+		Route::post('/create', [ContentController::class, 'create'])->name('create');
     });
 
     Route::prefix('comment')
@@ -111,13 +112,16 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
 
         Route::post('/add-edit', [CommentController::class, 'addEditComment'])->name('add-edit');
     });
-
-    Route::prefix('topic')
+	
+	Route::prefix('topic')
     ->name('topic.')
     ->group(function(){
         Route::post('/create', [PrimaryTopicController::class, 'create'])->name('create');
-        Route::post('/update-status', [PrimaryTopicController::class, 'updateStatus'])->name('update-status');
+		Route::post('/update-status', [PrimaryTopicController::class, 'updateStatus'])->name('update-status');
 		Route::post('/sort-record', [PrimaryTopicController::class, 'topicBySort'])->name('sort-record');
+		Route::post('/favorite', [SetFavoriteController::class, 'setFavoriteTopic'])->name('favorite');
+		Route::post('/unfavorite', [SetFavoriteController::class, 'unsetFavoriteTopic'])->name('unfavorite');
+		Route::post('/favorite-list', [PrimaryTopicController::class, 'favoriteTopicList'])->name('favorite-list');
     });
 
     Route::get('/pepper-login', [PeppertypeController::class, 'login']);
