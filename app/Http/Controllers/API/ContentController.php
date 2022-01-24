@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Topics;
 use App\Models\Comments;
+use App\Models\Notifications;
 use App\Models\User;
+use App\Models\Websites;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -224,12 +226,117 @@ class ContentController extends BaseController
                 return $this->handleError('content can not update, Wrong action', [], 500);
             }
 
+            $website = Websites::find($request->website);
+            $owners = explode(',', $website->owners);
+			$time = Carbon::now()->toDateTimeString();
+            $notify = [];
+            if($loginUser->role == 'writer') {
+                foreach($owners as $owner) {
+                    $notify[] = [
+                        'recipient_user_id' => $owner,
+                        'sender_user_id' => $loginUser->id,
+						'website_id' => $website->id,
+                        'heading' => 'Record updated',
+                        'details' => sprintf('%s for %s has been updated.', $contentDetails->title, $website->name),
+						'created_by_id' => $loginUser->id,
+						'updated_by_id' => $loginUser->id,
+						'created_at' => $time,
+						'updated_at' => $time
+                    ];
+                }
+            }
+            elseif($loginUser->role == 'client') {
+                $notify[] = [
+                    'recipient_user_id' => $contentDetails->created_by_id,
+                    'sender_user_id' => $loginUser->id,
+					'website_id' => $website->id,
+                    'heading' => 'Status updated',
+                    'details' => sprintf('%s has been %s by %s.', $contentDetails->title, $contentDetails->fresh()->status, $loginUser->name),
+					'created_by_id' => $loginUser->id,
+					'updated_by_id' => $loginUser->id,
+					'created_at' => $time,
+					'updated_at' => $time
+                ];
+            }
+            if(count($notify)) {
+                Notifications::insert($notify);
+            }
+
             return $this->handleResponse($contentDetails->fresh(), 'Content updated successfully');            
             
         }
         catch(Exception $e) 
         {
             logger('review content: '.$e->getMessage());
+            return $this->handleError('Something went wrong', [], 500);
+        }
+
+    }
+
+    public function create(Request $request)
+    {
+        try {
+            $loginUser = Auth::user();
+            $input = $request->only('website', 'primary_topic', 'child_topic', 'content_type', 'title', 'description');
+                
+            $validator = Validator::make($input,[
+                'website' => 'required|integer',
+                'primary_topic' => 'required|integer',
+                'child_topic' => 'required|integer',
+                'content_type' => 'required|in:'.Content::CONTENT_TYPE_ARTICLE.','.Content::CONTENT_TYPE_OUTLINE,
+                'title' => 'required',
+                'description' => 'required'
+            ]);
+
+            if ($validator->fails()) {
+                return $this->handleError('Required field missing.', $validator->errors()->all(), 422);
+            }
+
+            $time = Carbon::now()->toDateTimeString();
+            $data = [
+                'website_id' => $request->website,
+                'primary_topic_id' => $request->primary_topic,
+                'child_topic_id' => $request->child_topic,
+                'content_type' => $request->content_type,
+                'title' => $request->title,
+                'description' => $request->description,
+                'user_id' => $loginUser->id,
+                'created_by_id' => $loginUser->id,
+                'updated_by_id' => $loginUser->id,
+                'created_at' => $time,
+                'updated_at' => $time
+            ];
+
+            $content = Content::create($data);
+                      
+
+            if($content) {
+                $website = Websites::find($request->website);
+                $owners = explode(',', $website->owners);
+                $notify = [];
+                foreach($owners as $owner) {
+                    $notify[] = [
+                        'recipient_user_id' => $owner,
+                        'sender_user_id' => $loginUser->id,
+						'website_id' => $website->id,
+                        'heading' => 'New record Created',
+                        'details' => sprintf('New %s has been added to %s.', $request->content_type, $website->name),
+						'created_by_id' => $loginUser->id,
+						'updated_by_id' => $loginUser->id,
+						'created_at' => $time,
+						'updated_at' => $time
+                    ];
+                }
+                Notifications::insert($notify);
+                return $this->handleResponse($content, 'Content created successfully');
+            }
+            
+            return $this->handleError('content can not create', [], 500);            
+            
+        }
+        catch(Exception $e) 
+        {
+            logger('create content: '.$e->getMessage());
             return $this->handleError('Something went wrong', [], 500);
         }
 

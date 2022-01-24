@@ -100,6 +100,7 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
         Route::post('/list-for-timeline', [ContentController::class, 'contentForTimeline'])->name('list-for-timeline');
         Route::post('/show-by-role/{content}', [ContentController::class, 'contentShowByRole'])->name('show-by-role');
         Route::post('/review-content', [ContentController::class, 'reviewContent'])->name('review-content');
+		Route::post('/create', [ContentController::class, 'create'])->name('create');
     });
 
     Route::prefix('comment')

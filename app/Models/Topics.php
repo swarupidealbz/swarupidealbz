@@ -36,7 +36,7 @@ class Topics extends Model
 
     public function groups()
     {
-        return $this->hasMany(TopicGroup::class);
+        return $this->hasMany(TopicGroup::class, 'topic_id');
     }
 
     public function createdUser()

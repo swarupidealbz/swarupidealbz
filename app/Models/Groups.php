@@ -14,6 +14,6 @@ class Groups extends Model
 
     public function topics()
     {
-        return $this->hasMany(TopicGroup::class);
+        return $this->hasMany(TopicGroup::class, 'group_id');
     }
 }

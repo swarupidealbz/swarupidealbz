@@ -129,15 +129,38 @@ class PrimaryTopicController extends BaseController
 
             $loginUser = Auth::user();
             $website = is_array($request->website) ? $request->website : explode(',',$request->website);
-            if($loginUser->role == 'client') {
-                $topicList = Topics::where('is_primary_topic', 1)->whereIn('website_id', $website)->get()
+            //if($loginUser->role == 'client') {
+                $topicList = Topics::where('is_primary_topic', 1)->whereIn('website_id', $website)->with(['groups.group'])->get()
 				->map(function($topic) use($loginUser){
 					if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
 						$topic->is_favorite = true;
 					}
+					else {
+                        $topic->is_favorite = false; 
+                    }
 					return $topic;
 				});
-            }
+				
+				$selectedGroups = [
+                    Topics::STATUS_APPROVED => [
+                        'id' => Topics::STATUS_APPROVED,
+                        'name' => ucwords(Topics::STATUS_APPROVED),
+                    ],
+                    Topics::STATUS_REJECTED => [
+                        'id' => Topics::STATUS_REJECTED,
+                        'name' => ucwords(Topics::STATUS_REJECTED)
+                    ]
+                ];
+                $topicList->each(function($topic) use(&$selectedGroups){
+                    $topic->groups->each(function($group) use(&$selectedGroups){
+                        $selectedGroups[$group->group_id] = $group->group;
+                    });
+                });
+                $response = [
+                    'topics' => $topicList,
+                    'groups' => $selectedGroups
+                ];
+            /*}
             else {
                 $topicList = Topics::where('is_primary_topic', 1)->get()->map(function($topic) use($loginUser){
 					if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
@@ -145,9 +168,9 @@ class PrimaryTopicController extends BaseController
 					}
 					return $topic;
 				});
-            }
+            }*/
 
-            return $this->handleResponse($topicList, 'Fetched matched website lists.');
+            return $this->handleResponse($response, 'Fetched matched website lists.');
         }
         catch(Exception $e) 
         {
@@ -174,6 +197,9 @@ class PrimaryTopicController extends BaseController
 					if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
 						$topic->is_favorite = true;
 					}
+					else {
+                        $topic->is_favorite = false; 
+                    }
 					return $topic;
 				});
             
@@ -245,13 +271,15 @@ class PrimaryTopicController extends BaseController
             $loginUser = Auth::user();
             $sort = $request->order;
             $website = is_array($request->website) ? $request->website : explode(',',$request->website);
-            $topicList = Topics::whereIn('website_id', $website)
+            $topicList = Topics::where('is_primary_topic', 1)->whereIn('website_id', $website)
             ->when($sort, function($q) use($sort) {
-                if($sort == 'alphabet') {
-                    return $q->orderBy('topic', 'asc');
+                if(in_array($sort, [Topics::STATUS_APPROVED, Topics::STATUS_REJECTED])) {
+                    return $q->where('status', strtolower($sort));
                 }
-                elseif($sort == 'rejected') {
-                    return $q->where('status', Topics::STATUS_REJECTED);
+                else {
+                    return $q->whereHas('groups', function($groups) use($sort){
+                        return $groups->where('group_id', $sort);
+                    });
                 }
             })->get();
            
