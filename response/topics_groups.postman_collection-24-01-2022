@@ -1,0 +1,301 @@
+{
+	"variables": [],
+	"info": {
+		"name": "topics_groups",
+		"_postman_id": "7a48a983-cfb8-c1ea-5089-ce79c576402b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://157.245.42.226/api/topic/sort-record",
+			"request": {
+				"url": "http://157.245.42.226/api/topic/sort-record",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "website",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "order",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "http://157.245.42.226/api/topic/sort-record"
+			},
+			"response": [
+				{
+					"id": "a1089044-067c-43dd-ac75-9e17e521f823",
+					"name": "http://157.245.42.226/api/topic/sort-record",
+					"originalRequest": {
+						"url": "http://157.245.42.226/api/topic/sort-record",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "website",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "order",
+									"value": "2",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "Keep-Alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "7402",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 24 Jan 2022 15:34:14 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"description": "Custom header"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "Apache/2.4.41 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Authorization",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "56",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 658,
+					"body": "{\"success\":true,\"data\":[{\"id\":2,\"website_id\":1,\"primary_topic_id\":null,\"is_primary_topic\":1,\"topic\":\"5 Grammar Tips to Improve Your AI Writing\",\"description\":\"\",\"topic_image_path\":\"\",\"keyword\":\"AI Writing\",\"serp_similarity\":\"topic 2 similarity\",\"search_volume\":\"3\",\"keyword_length\":3,\"keyword_type\":\"string\",\"status\":\"open\",\"attr_bg_color\":null,\"attr_image\":null,\"attr_font_color\":null,\"attr_text_placement\":null,\"attr_tile_mode\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T18:13:30.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"website\":{\"id\":1,\"language_id\":1,\"region_id\":1,\"name\":\"google.io\",\"owners\":\"1,2,3,4,5,6,7,8,9,10,35\",\"created_by_id\":1,\"updated_by_id\":1,\"created_at\":\"2021-12-22T16:52:07.000000Z\",\"updated_at\":\"2021-12-22T16:52:07.000000Z\",\"deleted_at\":null,\"owner_details_list\":[{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":3,\"username\":\"abc@username\",\"email\":\"abc@a12.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:15:53.000000Z\",\"updated_at\":\"2022-01-03T10:15:53.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":4,\"username\":\"abc@username.com\",\"email\":\"abc@username.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:20:23.000000Z\",\"updated_at\":\"2022-01-03T10:20:23.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":5,\"username\":\"abc@username1.com\",\"email\":\"abc@username1.com\",\"email_verified_at\":null,\"first_name\":\"Prabir\",\"last_name\":\"Sarkar\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T11:45:10.000000Z\",\"updated_at\":\"2022-01-05T11:45:10.000000Z\",\"deleted_at\":null,\"name\":\"Prabir Sarkar\"},{\"id\":6,\"username\":\"swarup+2@idealabz.biz\",\"email\":\"swarup+2@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:51:38.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T17:47:59.000000Z\",\"updated_at\":\"2022-01-05T17:51:38.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":7,\"username\":\"client@idealabz.biz\",\"email\":\"swarup+3@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:52:39.000000Z\",\"first_name\":\"client\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"client\",\"status\":1,\"created_at\":\"2022-01-05T17:49:26.000000Z\",\"updated_at\":\"2022-01-05T17:52:39.000000Z\",\"deleted_at\":null,\"name\":\"client gorai\"},{\"id\":8,\"username\":\"abc2@username.com\",\"email\":\"abc2@username.com\",\"email_verified_at\":null,\"first_name\":\"Amit\",\"last_name\":\"Dutta\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-06T10:43:11.000000Z\",\"updated_at\":\"2022-01-06T10:43:11.000000Z\",\"deleted_at\":null,\"name\":\"Amit Dutta\"},{\"id\":9,\"username\":\"srikanth@idealabz.biz\",\"email\":\"srikanth@idealabz.biz\",\"email_verified_at\":\"2022-01-08T13:33:15.000000Z\",\"first_name\":\"Srikanth\",\"last_name\":\"Balakumar\",\"mobile\":\"13410020012\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T13:31:10.000000Z\",\"updated_at\":\"2022-01-08T13:33:15.000000Z\",\"deleted_at\":null,\"name\":\"Srikanth Balakumar\"},{\"id\":10,\"username\":\"swarup+4@idealabz.biz\",\"email\":\"swarup+4@idealabz.biz\",\"email_verified_at\":\"2022-01-08T16:15:46.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T16:15:19.000000Z\",\"updated_at\":\"2022-01-08T16:15:46.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":35,\"username\":\"writer@idealabz.biz\",\"email\":\"swarup+18@idealabz.biz\",\"email_verified_at\":\"2022-01-12T16:04:42.000000Z\",\"first_name\":\"writer\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"writer\",\"status\":1,\"created_at\":\"2022-01-12T16:02:43.000000Z\",\"updated_at\":\"2022-01-12T18:10:02.000000Z\",\"deleted_at\":null,\"name\":\"writer gorai\"}],\"language\":{\"id\":1,\"language_name\":\"English\",\"language_short_name\":\"EN\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"region\":{\"id\":1,\"region_name\":\"Asia\",\"region_short_name\":\"AS\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}}],\"message\":\"Fetched matched website lists.\"}"
+				}
+			]
+		},
+		{
+			"name": "http://157.245.42.226/api/primary-topic/list-by-website",
+			"request": {
+				"url": "http://157.245.42.226/api/primary-topic/list-by-website",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "website",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "http://157.245.42.226/api/primary-topic/list-by-website"
+			},
+			"response": [
+				{
+					"id": "3e093a3d-24ee-4abc-90e1-141708977f60",
+					"name": "http://157.245.42.226/api/primary-topic/list-by-website",
+					"originalRequest": {
+						"url": "http://157.245.42.226/api/primary-topic/list-by-website",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "website",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "Keep-Alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 24 Jan 2022 15:40:18 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"description": "Custom header"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "Apache/2.4.41 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Authorization",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1214,
+					"body": "{\"success\":true,\"data\":{\"topics\":[{\"id\":1,\"website_id\":1,\"primary_topic_id\":null,\"is_primary_topic\":1,\"topic\":\"Lead Your Business - The Effective CIO\",\"description\":\"\",\"topic_image_path\":\"\",\"keyword\":\"CIO\",\"serp_similarity\":\"1\",\"search_volume\":\"3\",\"keyword_length\":3,\"keyword_type\":\"string\",\"status\":\"open\",\"attr_bg_color\":null,\"attr_image\":null,\"attr_font_color\":null,\"attr_text_placement\":null,\"attr_tile_mode\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-11T18:11:00.000000Z\",\"updated_at\":\"2022-01-17T18:11:49.000000Z\",\"deleted_at\":null,\"is_favorite\":false,\"website\":{\"id\":1,\"language_id\":1,\"region_id\":1,\"name\":\"google.io\",\"owners\":\"1,2,3,4,5,6,7,8,9,10,35\",\"created_by_id\":1,\"updated_by_id\":1,\"created_at\":\"2021-12-22T16:52:07.000000Z\",\"updated_at\":\"2021-12-22T16:52:07.000000Z\",\"deleted_at\":null,\"owner_details_list\":[{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":3,\"username\":\"abc@username\",\"email\":\"abc@a12.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:15:53.000000Z\",\"updated_at\":\"2022-01-03T10:15:53.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":4,\"username\":\"abc@username.com\",\"email\":\"abc@username.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:20:23.000000Z\",\"updated_at\":\"2022-01-03T10:20:23.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":5,\"username\":\"abc@username1.com\",\"email\":\"abc@username1.com\",\"email_verified_at\":null,\"first_name\":\"Prabir\",\"last_name\":\"Sarkar\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T11:45:10.000000Z\",\"updated_at\":\"2022-01-05T11:45:10.000000Z\",\"deleted_at\":null,\"name\":\"Prabir Sarkar\"},{\"id\":6,\"username\":\"swarup+2@idealabz.biz\",\"email\":\"swarup+2@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:51:38.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T17:47:59.000000Z\",\"updated_at\":\"2022-01-05T17:51:38.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":7,\"username\":\"client@idealabz.biz\",\"email\":\"swarup+3@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:52:39.000000Z\",\"first_name\":\"client\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"client\",\"status\":1,\"created_at\":\"2022-01-05T17:49:26.000000Z\",\"updated_at\":\"2022-01-05T17:52:39.000000Z\",\"deleted_at\":null,\"name\":\"client gorai\"},{\"id\":8,\"username\":\"abc2@username.com\",\"email\":\"abc2@username.com\",\"email_verified_at\":null,\"first_name\":\"Amit\",\"last_name\":\"Dutta\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-06T10:43:11.000000Z\",\"updated_at\":\"2022-01-06T10:43:11.000000Z\",\"deleted_at\":null,\"name\":\"Amit Dutta\"},{\"id\":9,\"username\":\"srikanth@idealabz.biz\",\"email\":\"srikanth@idealabz.biz\",\"email_verified_at\":\"2022-01-08T13:33:15.000000Z\",\"first_name\":\"Srikanth\",\"last_name\":\"Balakumar\",\"mobile\":\"13410020012\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T13:31:10.000000Z\",\"updated_at\":\"2022-01-08T13:33:15.000000Z\",\"deleted_at\":null,\"name\":\"Srikanth Balakumar\"},{\"id\":10,\"username\":\"swarup+4@idealabz.biz\",\"email\":\"swarup+4@idealabz.biz\",\"email_verified_at\":\"2022-01-08T16:15:46.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T16:15:19.000000Z\",\"updated_at\":\"2022-01-08T16:15:46.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":35,\"username\":\"writer@idealabz.biz\",\"email\":\"swarup+18@idealabz.biz\",\"email_verified_at\":\"2022-01-12T16:04:42.000000Z\",\"first_name\":\"writer\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"writer\",\"status\":1,\"created_at\":\"2022-01-12T16:02:43.000000Z\",\"updated_at\":\"2022-01-12T18:10:02.000000Z\",\"deleted_at\":null,\"name\":\"writer gorai\"}],\"language\":{\"id\":1,\"language_name\":\"English\",\"language_short_name\":\"EN\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"region\":{\"id\":1,\"region_name\":\"Asia\",\"region_short_name\":\"AS\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"groups\":[{\"id\":1,\"topic_id\":1,\"group_id\":1,\"group\":{\"id\":1,\"name\":\"Alphabeticals\",\"description\":\"Group Description\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null}}]},{\"id\":2,\"website_id\":1,\"primary_topic_id\":null,\"is_primary_topic\":1,\"topic\":\"5 Grammar Tips to Improve Your AI Writing\",\"description\":\"\",\"topic_image_path\":\"\",\"keyword\":\"AI Writing\",\"serp_similarity\":\"topic 2 similarity\",\"search_volume\":\"3\",\"keyword_length\":3,\"keyword_type\":\"string\",\"status\":\"open\",\"attr_bg_color\":null,\"attr_image\":null,\"attr_font_color\":null,\"attr_text_placement\":null,\"attr_tile_mode\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T18:13:30.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"is_favorite\":false,\"website\":{\"id\":1,\"language_id\":1,\"region_id\":1,\"name\":\"google.io\",\"owners\":\"1,2,3,4,5,6,7,8,9,10,35\",\"created_by_id\":1,\"updated_by_id\":1,\"created_at\":\"2021-12-22T16:52:07.000000Z\",\"updated_at\":\"2021-12-22T16:52:07.000000Z\",\"deleted_at\":null,\"owner_details_list\":[{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":3,\"username\":\"abc@username\",\"email\":\"abc@a12.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:15:53.000000Z\",\"updated_at\":\"2022-01-03T10:15:53.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":4,\"username\":\"abc@username.com\",\"email\":\"abc@username.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:20:23.000000Z\",\"updated_at\":\"2022-01-03T10:20:23.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":5,\"username\":\"abc@username1.com\",\"email\":\"abc@username1.com\",\"email_verified_at\":null,\"first_name\":\"Prabir\",\"last_name\":\"Sarkar\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T11:45:10.000000Z\",\"updated_at\":\"2022-01-05T11:45:10.000000Z\",\"deleted_at\":null,\"name\":\"Prabir Sarkar\"},{\"id\":6,\"username\":\"swarup+2@idealabz.biz\",\"email\":\"swarup+2@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:51:38.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T17:47:59.000000Z\",\"updated_at\":\"2022-01-05T17:51:38.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":7,\"username\":\"client@idealabz.biz\",\"email\":\"swarup+3@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:52:39.000000Z\",\"first_name\":\"client\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"client\",\"status\":1,\"created_at\":\"2022-01-05T17:49:26.000000Z\",\"updated_at\":\"2022-01-05T17:52:39.000000Z\",\"deleted_at\":null,\"name\":\"client gorai\"},{\"id\":8,\"username\":\"abc2@username.com\",\"email\":\"abc2@username.com\",\"email_verified_at\":null,\"first_name\":\"Amit\",\"last_name\":\"Dutta\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-06T10:43:11.000000Z\",\"updated_at\":\"2022-01-06T10:43:11.000000Z\",\"deleted_at\":null,\"name\":\"Amit Dutta\"},{\"id\":9,\"username\":\"srikanth@idealabz.biz\",\"email\":\"srikanth@idealabz.biz\",\"email_verified_at\":\"2022-01-08T13:33:15.000000Z\",\"first_name\":\"Srikanth\",\"last_name\":\"Balakumar\",\"mobile\":\"13410020012\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T13:31:10.000000Z\",\"updated_at\":\"2022-01-08T13:33:15.000000Z\",\"deleted_at\":null,\"name\":\"Srikanth Balakumar\"},{\"id\":10,\"username\":\"swarup+4@idealabz.biz\",\"email\":\"swarup+4@idealabz.biz\",\"email_verified_at\":\"2022-01-08T16:15:46.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T16:15:19.000000Z\",\"updated_at\":\"2022-01-08T16:15:46.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":35,\"username\":\"writer@idealabz.biz\",\"email\":\"swarup+18@idealabz.biz\",\"email_verified_at\":\"2022-01-12T16:04:42.000000Z\",\"first_name\":\"writer\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"writer\",\"status\":1,\"created_at\":\"2022-01-12T16:02:43.000000Z\",\"updated_at\":\"2022-01-12T18:10:02.000000Z\",\"deleted_at\":null,\"name\":\"writer gorai\"}],\"language\":{\"id\":1,\"language_name\":\"English\",\"language_short_name\":\"EN\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"region\":{\"id\":1,\"region_name\":\"Asia\",\"region_short_name\":\"AS\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"groups\":[{\"id\":2,\"topic_id\":2,\"group_id\":2,\"group\":{\"id\":2,\"name\":\"Prepositions\",\"description\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-24T06:30:00.000000Z\",\"updated_at\":\"2022-01-24T06:30:00.000000Z\",\"deleted_at\":null}}]},{\"id\":3,\"website_id\":1,\"primary_topic_id\":null,\"is_primary_topic\":1,\"topic\":\"How are wine corks made?\",\"description\":\"\",\"topic_image_path\":\"\",\"keyword\":\"TWS\",\"serp_similarity\":\"topic 3 similarity\",\"search_volume\":\"3\",\"keyword_length\":3,\"keyword_type\":\"str\",\"status\":\"open\",\"attr_bg_color\":null,\"attr_image\":null,\"attr_font_color\":null,\"attr_text_placement\":null,\"attr_tile_mode\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T18:15:21.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"is_favorite\":false,\"website\":{\"id\":1,\"language_id\":1,\"region_id\":1,\"name\":\"google.io\",\"owners\":\"1,2,3,4,5,6,7,8,9,10,35\",\"created_by_id\":1,\"updated_by_id\":1,\"created_at\":\"2021-12-22T16:52:07.000000Z\",\"updated_at\":\"2021-12-22T16:52:07.000000Z\",\"deleted_at\":null,\"owner_details_list\":[{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":3,\"username\":\"abc@username\",\"email\":\"abc@a12.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:15:53.000000Z\",\"updated_at\":\"2022-01-03T10:15:53.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":4,\"username\":\"abc@username.com\",\"email\":\"abc@username.com\",\"email_verified_at\":null,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-03T10:20:23.000000Z\",\"updated_at\":\"2022-01-03T10:20:23.000000Z\",\"deleted_at\":null,\"name\":\"admin one\"},{\"id\":5,\"username\":\"abc@username1.com\",\"email\":\"abc@username1.com\",\"email_verified_at\":null,\"first_name\":\"Prabir\",\"last_name\":\"Sarkar\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T11:45:10.000000Z\",\"updated_at\":\"2022-01-05T11:45:10.000000Z\",\"deleted_at\":null,\"name\":\"Prabir Sarkar\"},{\"id\":6,\"username\":\"swarup+2@idealabz.biz\",\"email\":\"swarup+2@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:51:38.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-05T17:47:59.000000Z\",\"updated_at\":\"2022-01-05T17:51:38.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":7,\"username\":\"client@idealabz.biz\",\"email\":\"swarup+3@idealabz.biz\",\"email_verified_at\":\"2022-01-05T17:52:39.000000Z\",\"first_name\":\"client\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"client\",\"status\":1,\"created_at\":\"2022-01-05T17:49:26.000000Z\",\"updated_at\":\"2022-01-05T17:52:39.000000Z\",\"deleted_at\":null,\"name\":\"client gorai\"},{\"id\":8,\"username\":\"abc2@username.com\",\"email\":\"abc2@username.com\",\"email_verified_at\":null,\"first_name\":\"Amit\",\"last_name\":\"Dutta\",\"mobile\":\"9614000000\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-06T10:43:11.000000Z\",\"updated_at\":\"2022-01-06T10:43:11.000000Z\",\"deleted_at\":null,\"name\":\"Amit Dutta\"},{\"id\":9,\"username\":\"srikanth@idealabz.biz\",\"email\":\"srikanth@idealabz.biz\",\"email_verified_at\":\"2022-01-08T13:33:15.000000Z\",\"first_name\":\"Srikanth\",\"last_name\":\"Balakumar\",\"mobile\":\"13410020012\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T13:31:10.000000Z\",\"updated_at\":\"2022-01-08T13:33:15.000000Z\",\"deleted_at\":null,\"name\":\"Srikanth Balakumar\"},{\"id\":10,\"username\":\"swarup+4@idealabz.biz\",\"email\":\"swarup+4@idealabz.biz\",\"email_verified_at\":\"2022-01-08T16:15:46.000000Z\",\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2022-01-08T16:15:19.000000Z\",\"updated_at\":\"2022-01-08T16:15:46.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},{\"id\":35,\"username\":\"writer@idealabz.biz\",\"email\":\"swarup+18@idealabz.biz\",\"email_verified_at\":\"2022-01-12T16:04:42.000000Z\",\"first_name\":\"writer\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"writer\",\"status\":1,\"created_at\":\"2022-01-12T16:02:43.000000Z\",\"updated_at\":\"2022-01-12T18:10:02.000000Z\",\"deleted_at\":null,\"name\":\"writer gorai\"}],\"language\":{\"id\":1,\"language_name\":\"English\",\"language_short_name\":\"EN\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"region\":{\"id\":1,\"region_name\":\"Asia\",\"region_short_name\":\"AS\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null,\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":1,\"username\":\"swarup@idealabz.biz\",\"email\":\"swarup@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-21T18:11:06.000000Z\",\"updated_at\":\"2021-12-21T18:11:06.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"}},\"created_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"updated_user\":{\"id\":2,\"username\":\"swarup+1@idealabz.biz\",\"email\":\"swarup+1@idealabz.biz\",\"email_verified_at\":null,\"first_name\":\"swarup\",\"last_name\":\"gorai\",\"mobile\":\"134\",\"role\":\"admin\",\"status\":1,\"created_at\":\"2021-12-22T16:53:09.000000Z\",\"updated_at\":\"2021-12-22T16:53:09.000000Z\",\"deleted_at\":null,\"name\":\"swarup gorai\"},\"groups\":[{\"id\":3,\"topic_id\":3,\"group_id\":3,\"group\":{\"id\":3,\"name\":\"Comparisons\",\"description\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}},{\"id\":4,\"topic_id\":3,\"group_id\":4,\"group\":{\"id\":4,\"name\":\"Related\",\"description\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}}]}],\"groups\":{\"approved\":{\"id\":\"approved\",\"name\":\"Approved\"},\"rejected\":{\"id\":\"rejected\",\"name\":\"Rejected\"},\"1\":{\"id\":1,\"name\":\"Alphabeticals\",\"description\":\"Group Description\",\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-17T06:30:00.000000Z\",\"updated_at\":\"2022-01-17T06:30:00.000000Z\",\"deleted_at\":null},\"2\":{\"id\":2,\"name\":\"Prepositions\",\"description\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":\"2022-01-24T06:30:00.000000Z\",\"updated_at\":\"2022-01-24T06:30:00.000000Z\",\"deleted_at\":null},\"3\":{\"id\":3,\"name\":\"Comparisons\",\"description\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null},\"4\":{\"id\":4,\"name\":\"Related\",\"description\":null,\"created_by_id\":2,\"updated_by_id\":2,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}}},\"message\":\"Fetched matched website lists.\"}"
+				}
+			]
+		}
+	]
+}

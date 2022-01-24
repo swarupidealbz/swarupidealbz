@@ -1,0 +1,571 @@
+{
+	"id": "0321c880-6b89-3330-58fb-cfb56e33cace",
+	"name": "content",
+	"description": "",
+	"order": [
+		"a384cbfe-b524-0fb0-3a0e-1d5c10ff877c",
+		"f8f04cd3-2d22-c67b-395c-b089f9121a4b",
+		"f1a75841-8d12-84a4-daff-cfc607d67cc7"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1638205774808,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "a384cbfe-b524-0fb0-3a0e-1d5c10ff877c",
+			"headers": "Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "first_name",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "last_name",
+					"value": "one",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "abc@a12.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "abc@username12",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "12345678",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "confirm_password",
+					"value": "12345678",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "mobile",
+					"value": "134",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1638217730472,
+			"name": "register",
+			"description": "",
+			"collectionId": "0321c880-6b89-3330-58fb-cfb56e33cace",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 963,
+					"headers": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 29 Nov 2021 20:28:37 +0000, Mon, 29 Nov 2021 20:28:37 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "localhost:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.3.2",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "57",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"success\":true,\"data\":{\"access_token\":\"7|8D8Za3KvOYGpvJi2QaOLkWUlZHVNhsBdxjeCW0zF\",\"token_type\":\"Bearer\"},\"message\":\"User registered successfully!\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "register",
+					"id": "7ca4801e-8d98-77a0-7224-3901ef925c5a",
+					"request": {
+						"url": "http://localhost:8000/api/register",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"enabled": true,
+								"warning": ""
+							}
+						],
+						"headers": "Accept: application/json\n",
+						"data": [
+							{
+								"key": "first_name",
+								"value": "admin",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "last_name",
+								"value": "one",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "email",
+								"value": "abc@a12.com",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "username",
+								"value": "abc@username12",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "password",
+								"value": "12345678",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "confirm_password",
+								"value": "12345678",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "mobile",
+								"value": "134",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "role",
+								"value": "admin",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							}
+						],
+						"method": "POST",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "f1a75841-8d12-84a4-daff-cfc607d67cc7",
+			"headers": "Authorization: Bearer 8|5n1VF9eVA5AEOBS3k6zgRXc49q6UpDHAtVMacsQk\nAccept: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer 8|5n1VF9eVA5AEOBS3k6zgRXc49q6UpDHAtVMacsQk",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/websites/list",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0321c880-6b89-3330-58fb-cfb56e33cace",
+			"data": null,
+			"dataMode": "params",
+			"name": "website list",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1638298899159,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 1624,
+					"headers": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 30 Nov 2021 19:00:53 +0000, Tue, 30 Nov 2021 19:00:53 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "localhost:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.3.2",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"success\":true,\"data\":[],\"message\":\"Fetched all list\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "website list",
+					"id": "07089666-8ddc-9872-f62a-aa7580517ca6",
+					"request": {
+						"url": "http://localhost:8000/api/websites/list",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 8|5n1VF9eVA5AEOBS3k6zgRXc49q6UpDHAtVMacsQk",
+								"description": "",
+								"enabled": true,
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"enabled": true,
+								"warning": ""
+							}
+						],
+						"headers": "Authorization: Bearer 8|5n1VF9eVA5AEOBS3k6zgRXc49q6UpDHAtVMacsQk\nAccept: application/json\n",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f8f04cd3-2d22-c67b-395c-b089f9121a4b",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAccept: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "0321c880-6b89-3330-58fb-cfb56e33cace",
+			"data": [
+				{
+					"key": "username",
+					"value": "abc@username",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "12345678",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1638217654695,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 953,
+					"headers": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 29 Nov 2021 20:27:01 +0000, Mon, 29 Nov 2021 20:27:01 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "localhost:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.3.2",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "57",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"success\":true,\"data\":{\"access_token\":\"6|ulBmSLNQNxBK08f2WnjwafBvEF7eUaQc5GaoUkgO\",\"token_type\":\"Bearer\",\"user\":{\"id\":1,\"first_name\":\"admin\",\"last_name\":\"one\",\"mobile\":\"134\",\"email\":\"abc@abc.com\",\"role\":\"admin\"}},\"message\":\"User logged in successfully!\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "login",
+					"id": "b57710c7-767d-f205-83b3-4d4e61a6cce9",
+					"request": {
+						"url": "http://localhost:8000/api/login",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"enabled": true,
+								"warning": ""
+							}
+						],
+						"headers": "Content-Type: application/x-www-form-urlencoded\nAccept: application/json\n",
+						"data": [
+							{
+								"key": "username",
+								"value": "abc@username",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "password",
+								"value": "12345678",
+								"description": "",
+								"type": "text",
+								"enabled": true
+							}
+						],
+						"method": "POST",
+						"dataMode": "urlencoded"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

@@ -1,0 +1,193 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CL_Dash",
+		"_postman_id": "ed503a47-dacb-8707-6e78-1f7899701545",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://157.245.42.226/api/dashboard/data",
+			"request": {
+				"url": "http://157.245.42.226/api/dashboard/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "dashboard data when no parameter"
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard website parameter1",
+			"request": {
+				"url": "http://157.245.42.226/api/dashboard/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "website",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "dashboard data when website=1"
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard website parameter2",
+			"request": {
+				"url": "http://157.245.42.226/api/dashboard/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "website",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "dashboard data when website=3"
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard parts side menu",
+			"request": {
+				"url": "http://157.245.42.226/api/dashboard/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "parts",
+							"value": "side_menu",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "dashboard data when parts=side_menu"
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard parts top bar",
+			"request": {
+				"url": "http://157.245.42.226/api/dashboard/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "parts",
+							"value": "top_bar",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "dashboard data when parts=top_bar"
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard parts data",
+			"request": {
+				"url": "http://157.245.42.226/api/dashboard/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 249|hHWEMHUj72E1sUvR9hx0Rw6Gi1wx4HWOM9Itkhet",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "parts",
+							"value": "data",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "dashboard data when parts=data"
+			},
+			"response": []
+		}
+	]
+}
