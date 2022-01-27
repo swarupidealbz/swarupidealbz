@@ -51,29 +51,33 @@ class PrimaryTopicController extends BaseController
         try {
             $user = Auth::user();
             $time = now()->toDateTimeString();
-            $input = $request->only('website', 'is_primary', 'topic_name', 'description', 'image');
+            $input = $request->only('website', 'is_primary', 'topic_name', 'description');
                     
             $validator = Validator::make($input,[
                 'website' => 'required',
                 'is_primary' => 'required',
                 'topic_name' => 'required',
                 'description' => 'required',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             ]);
 			
 			if ($validator->fails()) {
                 return $this->handleError('Required field missing.', $validator->errors()->all(), 422);
             }
 
-            $name = \Str::beforeLast($request->image->getClientOriginalName(),'.');
-            $imageName = $name.'_'.time().'.'.$request->image->extension(); 
-            $path = $request->image->move(storage_path('app/public/images'), $imageName); //public/images/filename
+            $storePath = '';
+            if($request->image) {
+                $name = \Str::beforeLast($request->image->getClientOriginalName(),'.');
+                $imageName = $name.'_'.time().'.'.$request->image->extension(); 
+                $path = $request->image->move(storage_path('app/public/images'), $imageName); //public/images/filename
+                $storePath = asset('images/'.$imageName);
+            }
             $inputData = [
                 'website_id' => $request->website,
                 'is_primary_topic' => ($request->is_primary == 'undefined') ? 1 : $request->is_primary,
                 'topic' => $request->topic_name,
                 'description' => $request->description,
-                'topic_image_path' => asset('images/'.$imageName),
+                'topic_image_path' => $storePath,
                 'created_by_id' => $user->id,
                 'updated_by_id' => $user->id,
                 'created_at' => $time,
