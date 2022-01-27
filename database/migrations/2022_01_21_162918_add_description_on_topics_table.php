@@ -14,8 +14,8 @@ class AddDescriptionOnTopicsTable extends Migration
     public function up()
     {
         Schema::table('topics', function (Blueprint $table) {
-            $table->longText('description')->after('topic');
-            $table->string('topic_image_path')->after('description');
+            $table->longText('description')->nullable()->after('topic');
+            $table->string('topic_image_path')->nullable()->after('description');
         });
     }
 
