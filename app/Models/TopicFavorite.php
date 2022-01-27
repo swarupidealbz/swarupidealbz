@@ -11,7 +11,7 @@ class TopicFavorite extends Model
 	
 	protected $table = 'topic_favorite';
 	protected $guarded = [];
-    protected $timestamp = false;
+    public $timestamps = false;
 	
 	public function updatedUser()
     {
