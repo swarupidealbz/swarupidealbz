@@ -67,7 +67,7 @@ class PrimaryTopicController extends BaseController
             }
 
             $imageName = time().'.'.$request->image->extension(); 
-            $path = $request->image->move('images', $imageName); //public/images/filename
+            $path = $request->image->move(asset('/images'), $imageName); //public/images/filename
             $inputData = [
                 'website_id' => $request->website,
                 'is_primary_topic' => $request->is_primary,
