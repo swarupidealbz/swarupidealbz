@@ -65,11 +65,12 @@ class PrimaryTopicController extends BaseController
                 return $this->handleError('Required field missing.', $validator->errors()->all(), 422);
             }
 
-            $imageName = time().'.'.$request->image->extension(); 
+            $name = \Str::beforeLast($request->image->getClientOriginalName(),'.');
+            $imageName = $name.'_'.time().'.'.$request->image->extension(); 
             $path = $request->image->move(storage_path('app/public/images'), $imageName); //public/images/filename
             $inputData = [
                 'website_id' => $request->website,
-                'is_primary_topic' => 1,//$request->is_primary,
+                'is_primary_topic' => $request->is_primary,
                 'topic' => $request->topic_name,
                 'description' => $request->description,
                 'topic_image_path' => asset('images/'.$imageName),
