@@ -73,7 +73,7 @@ class PrimaryTopicController extends BaseController
                 'is_primary_topic' => $request->is_primary,
                 'topic' => $request->topic_name,
                 'description' => $request->description,
-                'topic_image_path' => $request->$path,
+                'topic_image_path' => public_path('images').'/'.$imageName,
                 'created_by_id' => $user->id,
                 'updated_by_id' => $user->id,
                 'created_at' => $time,
