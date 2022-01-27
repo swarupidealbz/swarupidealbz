@@ -49,7 +49,7 @@ class PrimaryTopicController extends BaseController
 	public function create(Request $request)
     {
         try {
-                
+              dd(base_path());  
             $user = Auth::user();
             $time = now()->toDateTimeString();
             $input = $request->only('website', 'is_primary', 'topic_name', 'description', 'image');
