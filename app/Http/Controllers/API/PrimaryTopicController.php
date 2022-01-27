@@ -70,7 +70,7 @@ class PrimaryTopicController extends BaseController
             $path = $request->image->move(public_path('images'), $imageName); //public/images/filename
             $inputData = [
                 'website_id' => $request->website,
-                'is_primary' => $request->is_primary,
+                'is_primary_topic' => $request->is_primary,
                 'topic' => $request->topic_name,
                 'description' => $request->description,
                 'image' => $request->$path,
