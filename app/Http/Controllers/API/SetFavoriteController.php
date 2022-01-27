@@ -30,8 +30,15 @@ class SetFavoriteController extends BaseController
             }
 			
 			$favorite = $user->favoriteTopic()->create(['topic_id' => $request->topic]);
+            $topic = Topics::find($request->topic);
+            if($topic->usersFavorite()->where(['user_id' => $user->id])->exists()) {
+                $topic->is_favorite = true;
+            }
+            else {
+                $topic->is_favorite = false; 
+            }
 			
-			return $this->handleResponse($favorite, 'Selected topic set as favorite successfully.');
+			return $this->handleResponse($topic, 'Selected topic set as favorite successfully.');
 			
 		}
         catch(Exception $e) 
@@ -58,8 +65,15 @@ class SetFavoriteController extends BaseController
             }
 			
 			$favorite = $user->favoriteTopic()->where(['topic_id' => $request->topic])->delete();
-			
-			return $this->handleResponse($favorite, 'Selected topic unset from favorite successfully.');
+			$topic = Topics::find($request->topic);
+            if($topic->usersFavorite()->where(['user_id' => $user->id])->exists()) {
+                $topic->is_favorite = true;
+            }
+            else {
+                $topic->is_favorite = false; 
+            }
+
+			return $this->handleResponse($topic, 'Selected topic unset from favorite successfully.');
 			
 		}
         catch(Exception $e) 
