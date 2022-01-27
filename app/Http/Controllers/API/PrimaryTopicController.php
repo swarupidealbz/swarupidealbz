@@ -73,7 +73,7 @@ class PrimaryTopicController extends BaseController
                 'is_primary_topic' => $request->is_primary,
                 'topic' => $request->topic_name,
                 'description' => $request->description,
-                'topic_image_path' => storage_path('images/'.$imageName),
+                'topic_image_path' => asset('storage/images/'.$imageName),
                 'created_by_id' => $user->id,
                 'updated_by_id' => $user->id,
                 'created_at' => $time,
@@ -281,7 +281,15 @@ class PrimaryTopicController extends BaseController
                         return $groups->where('group_id', $sort);
                     });
                 }
-            })->get();
+            })->get()->map(function($topic) use($loginUser){
+                if($topic->usersFavorite()->where(['user_id' => $loginUser->id])->exists()) {
+                    $topic->is_favorite = true;
+                }
+                else {
+                    $topic->is_favorite = false; 
+                }
+                return $topic;
+            });
            
             return $this->handleResponse($topicList, 'Fetched matched website lists.');
         }
